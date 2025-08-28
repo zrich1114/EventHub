@@ -12,3 +12,13 @@ tasks:
           echo "REACT_APP_API_URL=$(gitpod url 3001)" > .env
           npm start
       openMode: split-right
+
+ports:
+    - name: front-end
+      port: 3000
+      onOpen: open-preview
+
+    - name: back-end
+      port: 3001
+      onOpen: ignore
+      visibility: public
