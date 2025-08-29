@@ -24,4 +24,15 @@ services:
         triggeredBy:
             - postEnvironmentStart
             # - postDevcontainerStart
+    
+    frontend:
+        name: Front End Service
+        description: React Application
+        commands:
+            start: |
+                cd client
+                npm install
+                npm start
+        triggeredBy:
+            - postEnvironmentStart
 
