@@ -1,4 +1,5 @@
 FROM gitpod/workspace-node
+
 FROM gitpod/workspace-postgres
 
 # use this Dockerfile to install additional tools you might need, e.g.
