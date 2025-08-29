@@ -11,7 +11,7 @@ tasks:
 services:
     backend:
         name: Backend Service
-        description: Example service simulating a backend
+        description: NodeJS Server
         commands:
             start: |
                 npm install pg dotenv
