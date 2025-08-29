@@ -1,12 +1,9 @@
 tasks:
-    hello:
-        name: Hello World
-        command: |
-            echo "Hello, World!"
+    seedDatabase:
+        name: create tables in db
+        command: './init-db.sh'
         triggeredBy:
         - manual
-        # - postEnvironmentStart
-        # - postDevcontainerStart
 
 services:
     backend:
@@ -17,13 +14,8 @@ services:
                 npm install pg dotenv
                 npm install
                 npm start
-            # stop: |
-            # 	echo "Stopping backend service..."
-            # 	rm /tmp/backend.started
-            # 	pkill backend
         triggeredBy:
             - postEnvironmentStart
-            # - postDevcontainerStart
     
     frontend:
         name: Front End Service
