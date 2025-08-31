@@ -1,31 +1,29 @@
 tasks:
-    seedDatabase:
-        name: create tables in db
-        command: './init-db.sh'
-        triggeredBy:
-        - manual
+  seedDatabase:
+    name: create tables in db
+    command: "./init-db.sh"
+    triggeredBy:
+      - manual
 
 services:
-    backend:
-        name: Backend Service
-        description: NodeJS Server
-        commands:
-            start: |
-                npm install pg dotenv
-                npm install
-                npm start
-        triggeredBy:
-            - postEnvironmentStart
-    
-    frontend:
-        name: Front End Service
-        description: React Application
-        commands:
-            start: |
-                cd client
-                npm install
-                npm start
-        triggeredBy:
-            - postEnvironmentStart
+  backend:
+    name: Backend Service
+    description: NodeJS Server
+    commands:
+      start: |
+        npm install pg dotenv
+        npm install
+        npm start
+    triggeredBy:
+      - postEnvironmentStart
 
-
+  frontend:
+    name: Front End Service
+    description: React Application
+    commands:
+      start: |
+        cd client
+        npm install
+        npm start
+    triggeredBy:
+      - postEnvironmentStart
