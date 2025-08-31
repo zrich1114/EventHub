@@ -6,7 +6,7 @@ import axios from "axios";
 function EventPage() {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
   useEffect(() => {
     axios

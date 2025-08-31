@@ -5,7 +5,7 @@ import axios from "axios";
 
 function HomePage() {
   const [events, setEvents] = useState([]);
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
   useEffect(() => {
     axios
