@@ -15,7 +15,7 @@ function EventPage() {
         setEvent(response.data);
       })
       .catch((error) => console.log(error));
-  }, [id]);
+  }, [id, apiUrl]);
 
   if (!event) return <div>Loading...</div>;
 

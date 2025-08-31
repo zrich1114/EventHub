@@ -14,7 +14,7 @@ function HomePage() {
         setEvents(response.data);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [apiUrl]);
 
   return (
     <div className="container">
